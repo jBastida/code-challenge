@@ -1,0 +1,134 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
+    height: 100%;
+    background-color: rgb(184, 221, 252);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button {
+    background-color: rgb(152, 179, 152);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: inline-block;
+    border-radius: 20px;
+    border-width: 0.5px;
+    padding: 10px 25px;
+}
+
+#input-task {
+    border-radius: 20px;
+    border-width: 0.5px;
+    height: 2rem;
+    width: 80%;
+}
+
+.task-list-container {
+    max-height: 45rem;
+    overflow-y: auto;
+    width: 87%;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.in-progress {
+    border-color: rgb(253, 253, 100);
+}
+
+
+li.completed { 
+    border-color: rgb(152, 179, 152);
+}
+
+.task-item {
+    flex: 1 1 80%;
+    padding: 5px;
+    position: relative;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 1rem;
+    color:  rgb(152, 179, 152);
+}
+
+.task-item::after {
+    content: '|';
+    font-size: 3.5rem;  
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.task-item.in-progress::after {
+    color: rgb(253, 253, 100);
+}
+
+.task-item.completed::after {
+    color: rgb(152, 179, 152);
+}
+
+.status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 10px;
+    width: 20%;
+}
+
+.status {
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.status-container.in-progress {
+    color: rgb(219 219 46);
+}
+
+.status-container.completed {
+    color: rgb(152, 179, 152);
+}

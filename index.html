@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code Challenge</title>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="main-container">
+        <h1>TODO list</h1>
+
+        <div class="task-container">
+            <div class="input-container">
+                <input id="input-task">
+                <button class="button" onclick="addTask()">Add Todo</button>
+            </div>
+
+            <div class="task-list-container">
+                <ul id="task-list">
+
+                </ul>
+            </div>
+            
+            <button class="button" onclick="removeCompletedTasks()">Remove completed</button>
+        </div>
+    </main>
+</body>
+
+</html>
